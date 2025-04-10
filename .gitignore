@@ -1,0 +1,30 @@
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+logs
+*.log.*.[0-9].gz
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Frontend build artifacts (assuming Vite/Create React App defaults)
+frontend/dist/
+frontend/build/
+frontend/.DS_Store
+
+# Backend specific (if any, e.g., uploads if not using cloud storage)
+# backend/uploads/
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db

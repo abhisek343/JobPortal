@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+/out
+/build
+/dist
+/coverage
+/lib
+/esm
+/types
+
+# testing
+/temp
+/tmp
+/private
+/reports
+/bundles
+/.cache
+/*.log
+
+# misc
+.DS_Store
+*.pem
+yarn-error.log
+
+# vscode
+.vscode

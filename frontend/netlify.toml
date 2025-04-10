@@ -1,0 +1,9 @@
+[build]
+  # Publish directory relative to the 'frontend' base directory
+  publish = "dist" 
+  # command = "npm run build" # Often set in UI, ensure it matches
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html" 
+  status = 200
