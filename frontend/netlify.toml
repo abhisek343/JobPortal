@@ -1,17 +1,9 @@
-# Netlify Build Settings
 [build]
-  # This command should match the one in your Netlify UI settings
-  # command = "npm run build" 
+  # Publish directory relative to the 'frontend' base directory
+  publish = "dist" 
+  # command = "npm run build" # Often set in UI, ensure it matches
 
-  # This publish directory MUST match the one in your Netlify UI settings.
-  # Since your base directory is 'frontend', this should be 'frontend/dist'.
-  publish = "frontend/dist" 
-
-# Redirect rule for Single Page Applications (SPA)
 [[redirects]]
-  # Redirect all paths...
-  from = "/*" 
-  # ...to the main index.html file in the publish directory.
+  from = "/*"
   to = "/index.html" 
-  # Return a 200 status code to let the client-side router handle it.
   status = 200
