@@ -67,8 +67,6 @@ JobPortal is a full-stack web application designed to connect job seekers with r
 
 ## Getting Started (Conceptual) 🏁
 
-(Based on typical MERN stack project structure)
-
 1.  **Clone the repository.**
 2.  **Backend Setup:**
     * Navigate to the `backend` directory.
