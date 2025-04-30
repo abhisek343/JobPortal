@@ -78,4 +78,4 @@ JobPortal is a full-stack web application designed to connect job seekers with r
     * Install dependencies: `npm install`
     * Ensure the API endpoints in `src/utils/constant.js` point to the correct backend URL.
     * Start the development server: `npm run dev`
-4.  **Access the application** in your browser (likely `http://localhost:5173` based on backend CORS config).
+4.  **Access the application** in your browser 
