@@ -1,0 +1,36 @@
+# Blueprint for deploying the backend service on Render
+
+services:
+  - type: web # web service
+    name: jobportal-backend # Name of your service
+    env: node # Environment (node, python, ruby, etc.)
+    region: oregon # Optional: specify a region (e.g., oregon, frankfurt)
+    rootDir: backend # Root directory for the backend code
+    plan: free # Optional: specify your plan (e.g., free, standard)
+    
+    buildFilter: # Optional: only rebuild if files in these paths change
+      paths:
+        - backend/**
+        - render.yaml # Rebuild if this file changes
+        
+    buildCommannd: "npm install" # Command to install dependencies
+    startCommand: "npm start" # Command to start the server (uses the script from backend/package.json)
+    
+    envVars: # Environment variables
+      - key: NODE_ENV
+        value: production
+      - key: PORT # Render sets this automatically, but good to be explicit if your app uses it
+        value: 10000 # Default port Render expects for Node.js apps unless configured otherwise
+      # Add other required environment variables here, e.g.:
+      # - key: DATABASE_URL
+      #   sync: false # Set this in Render's dashboard for security
+      # - key: JWT_SECRET
+      #   sync: false # Set this in Render's dashboard for security
+      # - key: CLOUDINARY_CLOUD_NAME
+      #   sync: false
+      # - key: CLOUDINARY_API_KEY
+      #   sync: false
+      # - key: CLOUDINARY_API_SECRET
+      #   sync: false
+      # - key: FRONTEND_URL
+      #   sync: false # For CORS configuration
